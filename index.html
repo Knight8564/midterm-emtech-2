@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>midterm</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portfolio</title>
+  
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Temporary Splash Notice Banner (Red Accent & Updated Text) -->
+  <div id="splash-banner" class="splash-banner">
+    <div class="splash-content">
+      <span class="splash-tag"><i class="fa-solid fa-triangle-exclamation"></i> Notice</span>
+      <p class="splash-text">
+        <strong>Temporary Preview:</strong> This site is temporary as the final one is in a different PC. This is work of AI, I won't change anything here but I will try my best to update this on my own coding... this is just used so I can pass the midterm practical. <em>(Will also be logged in the documentation)</em>
+      </p>
+    </div>
+    <button id="dismiss-splash-btn" class="splash-dismiss" aria-label="Dismiss notice">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-brand">
+        <span class="brand-code">&lt;</span>Portfolio<span class="brand-code">/&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about" class="nav-item"><i class="fa-solid fa-user"></i> About Me</a></li>
+        <li><a href="#contact" class="nav-item"><i class="fa-solid fa-paper-plane"></i> Contact Me</a></li>
+      </ul>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-item"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about" class="mobile-nav-item"><i class="fa-solid fa-user"></i> About Me</a></li>
+        <li><a href="#contact" class="mobile-nav-item"><i class="fa-solid fa-paper-plane"></i> Contact Me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Home Section -->
+    <section id="home" class="section hero-section">
+      <div class="container hero-container">
+        <div class="hero-text-content">
+          <div class="hero-badge">
+            <span class="status-dot"></span> Engineering & Tech Student
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Student Developer</span>
+          </h1>
+          <p class="hero-description">
+            Building intuitive digital experiences, solving technical challenges, and turning ideas into clean, functional code. Welcome to my personal workspace.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#about" class="btn btn-primary">
+              <span>Explore My Work</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get In Touch</span>
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+
+          <div class="hero-quick-stats">
+            <div class="stat-card">
+              <span class="stat-num">3+</span>
+              <span class="stat-label">Years Learning</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">15+</span>
+              <span class="stat-label">Projects Built</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num">100%</span>
+              <span class="stat-label">Dedication</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media-content">
+          <div class="avatar-card">
+            <div class="avatar-frame">
+              <img src="https://images.unsplash.com/photo-1534972195531-a756b1126f24?auto=format&fit=crop&w=700&q=80" alt="Student developer portrait" class="avatar-img" />
+              <div class="avatar-badge">
+                <i class="fa-solid fa-code"></i>
+              </div>
+            </div>
+            <div class="tech-chip chip-1"><i class="fa-brands fa-js"></i> JavaScript</div>
+            <div class="tech-chip chip-2"><i class="fa-brands fa-css3-alt"></i> Modern CSS</div>
+            <div class="tech-chip chip-3"><i class="fa-brands fa-html5"></i> Semantic HTML</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Background</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">A short overview of who I am, what drives me, and what I enjoy working on.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Introduction Card -->
+          <div class="card intro-card">
+            <div class="card-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+            <h3>Who I Am</h3>
+            <p>
+              I am an aspiring engineer and developer driven by curiosity for how software and systems interact. I enjoy breaking down complex problems into modular, maintainable, and elegant solutions.
+            </p>
+            <p>
+              Currently expanding my foundation in web technologies, algorithmic thinking, and user-centric software design.
+            </p>
+            <div class="tags-container">
+              <span class="tag">Problem Solver</span>
+              <span class="tag">System Design</span>
+              <span class="tag">Creative Coder</span>
+            </div>
+          </div>
+
+          <!-- Academic & Skillset Card -->
+          <div class="card focus-card">
+            <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Key Focus Areas</h3>
+            <ul class="focus-list">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Frontend Architecture:</strong> Crafting responsive, mobile-first interfaces using semantic HTML and CSS Grid/Flexbox.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Interactive Scripting:</strong> Powering dynamic user interactions, DOM event handlers, and data handling with clean JavaScript.
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Continuous Learning:</strong> Regularly building hands-on projects, exploring new tooling, and preparing full-stack workflows.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Contact Me Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Get In Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-subtitle">Have a question, feedback, or want to collaborate? Send me a message below.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="card contact-card">
+            <div class="contact-info-column">
+              <h3>Let's Connect</h3>
+              <p>Fill out the form and I'll get back to you as soon as possible.</p>
+
+              <div class="info-items">
+                <div class="info-item">
+                  <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                  <div>
+                    <span class="info-label">Email</span>
+                    <span class="info-value">student@example.edu</span>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                  <div>
+                    <span class="info-label">Location</span>
+                    <span class="info-value">Manila, Philippines</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-user form-icon"></i>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    name="name" 
+                    placeholder="e.g. Alex Santos" 
+                    required 
+                  />
+                </div>
+                <span class="form-error-msg" id="name-error">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Your Email</label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-envelope form-icon"></i>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    name="email" 
+                    placeholder="e.g. alex@example.com" 
+                    required 
+                  />
+                </div>
+                <span class="form-error-msg" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Your Message</label>
+                <div class="input-wrapper">
+                  <i class="fa-regular fa-comment-dots form-icon textarea-icon"></i>
+                  <textarea 
+                    id="contact-message" 
+                    name="message" 
+                    rows="4" 
+                    placeholder="Write your message here..." 
+                    required
+                  ></textarea>
+                </div>
+                <span class="form-error-msg" id="message-error">Please write a brief message.</span>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
+                <span class="btn-text">Submit Message</span>
+                <i class="fa-solid fa-paper-plane btn-icon"></i>
+              </button>
+
+              <div id="form-alert" class="form-alert" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Student Portfolio. All rights reserved.</p>
+      <a href="#home" class="back-to-top" id="back-to-top" title="Return to top">
+        <i class="fa-solid fa-chevron-up"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
+</html>
